@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Levels/Tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://Hazards/SpikeTop.tscn" type="PackedScene" id=3]
+[ext_resource path="res://SFX/Summer_Park.ogg" type="AudioStream" id=4]
 
 [node name="Level1" type="Node2D"]
 
@@ -22,25 +23,24 @@ tile_data = PoolIntArray( -982953, 6, 0, -982933, 6, 0, -720738, 7, 0, -720730, 
 position = Vector2( 1357, 1702 )
 
 [node name="SpikeTop2" parent="Hazards" instance=ExtResource( 3 )]
-modulate = Color( 0.831373, 0.12549, 0.32549, 1 )
 position = Vector2( 3353, 2340 )
 
 [node name="SpikeTop3" parent="Hazards" instance=ExtResource( 3 )]
-modulate = Color( 0.831373, 0.12549, 0.32549, 1 )
 position = Vector2( 5055, 1384 )
 
 [node name="SpikeTop4" parent="Hazards" instance=ExtResource( 3 )]
-modulate = Color( 0.831373, 0.12549, 0.32549, 1 )
 position = Vector2( 6014, 1702 )
 
 [node name="SpikeTop5" parent="Hazards" instance=ExtResource( 3 )]
-modulate = Color( 0.831373, 0.12549, 0.32549, 1 )
 position = Vector2( 8476, 2214 )
 
 [node name="SpikeTop6" parent="Hazards" instance=ExtResource( 3 )]
-modulate = Color( 0.831373, 0.12549, 0.32549, 1 )
 position = Vector2( 7690, -411 )
 
 [node name="SpikeTop7" parent="Hazards" instance=ExtResource( 3 )]
-modulate = Color( 0.831373, 0.12549, 0.32549, 1 )
 position = Vector2( 10462, -407 )
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -20.0
+autoplay = true
